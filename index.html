@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #102a43;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        header h2 {
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+
+        nav a:hover {
+            color: #8ecae6;
+        }
+
+        section {
+            padding: 70px 8%;
+            scroll-margin-top: 20px;
+        }
+
+        .hero {
+            background: #102a43;
+            color: white;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin-bottom: 24px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #8ecae6;
+            color: #102a43;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #102a43;
+        }
+
+        .hero h2 {
+            color: white;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: white;
+            padding: 10px 16px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 24px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .project-card h3 {
+            color: #102a43;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            margin-bottom: 12px;
+        }
+
+        .contact {
+            background: #e8eef5;
+        }
+
+        footer {
+            background: #102a43;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>My Portfolio</h2>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hi, I'm Your Name</h1>
+
+        <h2>Process Automation & Analytics</h2>
+
+        <p>
+            I am an aspiring technology professional interested
+            in using programming, data and automation to solve
+            real-world business problems.
+        </p>
+
+        <a href="#projects" class="button">
+            Explore My Projects
+        </a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <p>
+            I am a student developing my technical skills in
+            process automation, programming and data analytics.
+            I enjoy learning how technology can improve business
+            processes and reduce repetitive tasks.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills">
+            <span class="skill">Microsoft Excel</span>
+            <span class="skill">Python</span>
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Process Automation</span>
+            <span class="skill">HTML & CSS</span>
+            <span class="skill">GitHub</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <h3>Project 1: Excel Automation</h3>
+
+                <p>
+                    A project idea to automate repetitive
+                    Excel reporting tasks.
+                </p>
+
+                <p><strong>Tools:</strong> Python, Excel</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 2: Data Analysis</h3>
+
+                <p>
+                    A project idea to analyse data and
+                    generate useful business insights.
+                </p>
+
+                <p><strong>Tools:</strong> Python, Excel</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Project 3: Personal Website</h3>
+
+                <p>
+                    This portfolio website, created to
+                    practise HTML, CSS and GitHub.
+                </p>
+
+                <p><strong>Tools:</strong> HTML, CSS, GitHub</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+
+        <p>
+            Interested in connecting or discussing a project?
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:your-email@example.com">
+                your-email@example.com
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
